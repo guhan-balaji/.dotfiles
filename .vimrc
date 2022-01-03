@@ -115,6 +115,15 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
+" map space <-> ctrl for splitting panes
+nnoremap <Space>ws <C-w>s
+nnoremap <Space>wv <C-w>v
+nnoremap <Space>ww <C-w>w
+nnoremap <Space>wh <C-w>h
+nnoremap <Space>wj <C-w>j
+nnoremap <Space>wk <C-w>k
+nnoremap <Space>wl <C-w>l
+
 " move split panes to left/bottom/top/right
 nnoremap <A-h> <C-W>H
 nnoremap <A-j> <C-W>J
@@ -122,10 +131,10 @@ nnoremap <A-k> <C-W>K
 nnoremap <A-l> <C-W>L
 
 " move between panes to left/bottom/top/right
-"nnoremap <C-h> <C-w>h
-"nnoremap <C-j> <C-w>j
-"nnoremap <C-k> <C-w>k
-"nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " disable swap files
 set noswapfile
@@ -153,6 +162,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'honza/vim-snippets'
+Plug 'sheerun/vim-polyglot'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 "Plug 'SirVer/ultisnips'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 

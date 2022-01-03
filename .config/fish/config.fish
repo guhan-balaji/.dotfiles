@@ -102,13 +102,18 @@ function copy
 end
 
 ## Useful aliases
+# vim to nvim
+alias vim='nvim'
+
 # Replace ls with exa
-alias ls='exa --color=always --group-directories-first --icons'     # default map
+alias ls='exa --color=always --group-directories-first --icons'     # preferred listing
 alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first --icons'  # long format
-alias l='exa -al --color=always --group-directories-first --icons'  # preferred listing
 alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
 alias l.="exa -a | egrep '^\.'"                                     # show only dotfiles
+
+# Map ls to nnn
+alias l='nnn -e'
 
 # Replace some more things with better alternatives
 alias cat='bat --style header --style rules --style snip --style changes --style header'

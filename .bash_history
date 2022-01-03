@@ -12,3 +12,11 @@ clear
 vim .bashrc 
 clear
 exit
+ls
+clear
+exit
+clear
+ls
+exit
+nvim emacs.service
+exit
