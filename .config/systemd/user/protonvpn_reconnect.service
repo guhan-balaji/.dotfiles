@@ -1,0 +1,8 @@
+
+# v3.6.1
+
+[Unit]
+Description=ProtonVPN Reconnector
+
+[Service]
+ExecStart=/usr/sbin/python /usr/lib/python3.9/site-packages/protonvpn_nm_lib/daemon/dbus_daemon_reconnector.py
