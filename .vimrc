@@ -124,6 +124,12 @@ nnoremap <Space>wj <C-w>j
 nnoremap <Space>wk <C-w>k
 nnoremap <Space>wl <C-w>l
 
+" map space <-> ctrl for adjusting window size
+nnoremap <Space>w+ <C-w>+
+nnoremap <Space>w- <C-w>-
+nnoremap <Space>w> <C-w>>
+nnoremap <Space>w< <C-w><
+
 " move split panes to left/bottom/top/right
 nnoremap <A-h> <C-W>H
 nnoremap <A-j> <C-W>J
