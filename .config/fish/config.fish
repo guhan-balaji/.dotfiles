@@ -102,15 +102,17 @@ function copy
 end
 
 ## Useful aliases
-# vim to nvim
-alias vim='nvim'
+# Text editor aliases
+alias vi='/usr/bin/vim'
+alias vim='/usr/bin/nvim'
 
 # Replace ls with exa
-alias ls='exa --color=always --group-directories-first --icons'     # preferred listing
-alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first --icons'  # long format
-alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
-alias l.="exa -a | egrep '^\.'"                                     # show only dotfiles
+alias ls='exa --color=always --group-directories-first --icons'        # preferred listing
+alias la='exa -a --color=always --group-directories-first --icons'     # all files and dirs
+alias ll='exa -l --color=always --group-directories-first --icons'     # long format
+alias lla='exa -al --color=always --group-directories-first --icons'   # long format --all
+alias lt='exa -aT --color=always --group-directories-first --icons'    # tree listing
+alias l.="exa -a | egrep '^\.'"                                        # show only dotfiles
 
 # Map ls to nnn
 alias l='nnn -e'
@@ -165,7 +167,7 @@ alias jctl="journalctl -p 3 -xb"
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
 # Git alias for tracking dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 ## Run paleofetch if session is interactive
 #if status --is-interactive
@@ -174,6 +176,10 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # set LC* variable
 set -x LC_ALL en_IN
+
+# Gpg settings
+# coz of ioctl errors
+export GPG_TTY=(tty)
 
 # jk & kj esc binding in fish
 set fish_key_bindings fish_user_key_bindings

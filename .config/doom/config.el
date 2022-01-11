@@ -20,15 +20,19 @@
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
 (setq doom-font (font-spec :family "FantasqueSansMono Nerd Font Mono" :size 19)
-      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 19)
-      doom-big-font (font-spec :family "FantasqueSansMono Nerd Font Mono" :size 24))
+      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 18)
+      doom-big-font (font-spec :family "Fira Code" :size 22))
+
 (after!
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
+
 (custom-set-faces!
   '(font-lock-comment-face :slant italic)
   '(font-lock-keyword-face :slant italic))
 
+(add-to-list default-frame-alist '((font . "FantasqueSansMono Nerd Font Mono")))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
@@ -60,6 +64,8 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; vi escpe with "jk" and "kj"
 (setq evil-escape-unordered-key-sequence "jk")
+
+;; Do not prompt confirmation for quitting emcas.
 (setq confirm-kill-emacs nil)
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
