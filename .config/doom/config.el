@@ -9,6 +9,12 @@
 (setq user-full-name "guhan-balaji"
       user-mail-address "guhanbalaji7@gmail.com")
 
+;; vi escape with "jk" and "kj".
+(setq evil-escape-unordered-key-sequence "jk")
+
+;; Do not prompt confirmation when quitting emcas.
+(setq confirm-kill-emacs nil)
+
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
@@ -31,8 +37,8 @@
   '(font-lock-comment-face :slant italic)
   '(font-lock-keyword-face :slant italic))
 
-(add-to-list default-frame-alist '((font . "FantasqueSansMono Nerd Font Mono")))
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
@@ -64,8 +70,5 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; vi escpe with "jk" and "kj"
-(setq evil-escape-unordered-key-sequence "jk")
-
-;; Do not prompt confirmation for quitting emcas.
-(setq confirm-kill-emacs nil)
+;; Wiriteroom (zen mode) settings
+(setq +zen-text-scale 0.5)
