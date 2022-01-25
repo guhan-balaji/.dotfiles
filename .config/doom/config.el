@@ -72,3 +72,7 @@
 
 ;; Wiriteroom (zen mode) settings
 (setq +zen-text-scale 0.5)
+
+;; Rust rls setup
+(after! rustic
+  (setq rustic-lsp-server 'rls))
