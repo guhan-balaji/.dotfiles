@@ -48,6 +48,10 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
+(use-package! org
+  :config
+  (setq org-hide-emphasis-markers t))
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type 'relative)
@@ -71,7 +75,7 @@
 ;; they are implemented.
 
 ;; Wiriteroom (zen mode) settings
-(setq +zen-text-scale 0.5)
+(setq +zen-text-scale 1)
 
 ;; Rust rls setup
 (after! rustic
