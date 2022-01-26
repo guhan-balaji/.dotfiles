@@ -50,7 +50,9 @@
 
 (use-package! org
   :config
-  (setq org-hide-emphasis-markers t))
+  (setq org-hide-emphasis-markers 't))
+
+(use-package! org-pandoc-import :after org)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
