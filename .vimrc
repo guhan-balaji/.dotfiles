@@ -31,6 +31,9 @@ set ignorecase
 " Do smart case matching
 set smartcase
 
+" Don't persist highlight after search
+set nohlsearch
+
 " Incremental search
 set incsearch
 
@@ -115,6 +118,15 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
+" Doom emacs like bindings.
+"
+" file operations
+nnoremap <Space>bs :w
+nnoremap <Space>bd :q
+nnoremap <Space>wd :q
+nnoremap <Space>fr :saveas 
+nnoremap <Space>qq :q!
+
 " map space <-> ctrl for splitting panes
 nnoremap <Space>ws <C-w>s
 nnoremap <Space>wv <C-w>v
@@ -125,10 +137,11 @@ nnoremap <Space>wk <C-w>k
 nnoremap <Space>wl <C-w>l
 
 " map space <-> ctrl for adjusting window size
-nnoremap <Space>w+ <C-w>+
-nnoremap <Space>w- <C-w>-
-nnoremap <Space>w> <C-w>>
-nnoremap <Space>w< <C-w><
+nnoremap <Space>w+    <C-w>+
+nnoremap <Space>w-    <C-w>-
+nnoremap <Space>w>    <C-w>>
+nnoremap <Space>w<    <C-w><
+nnoremap <Space>wmm   100<C-w>+
 
 " move split panes to left/bottom/top/right
 nnoremap <A-h> <C-W>H
@@ -181,6 +194,6 @@ call plug#end()
 " nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <Space>n :NERDTree<CR>
-nnoremap <Space>t :NERDTreeToggle<CR>
+nnoremap <Space>op :NERDTreeToggle<CR>
 nnoremap <Space>f :NERDTreeFind<CR>
 
