@@ -39,32 +39,29 @@ disabled = false
 ## SECOND LINE/ROW: Prompt
 # Somethere at the beginning
 [battery]
-full_symbol = " "
-charging_symbol = " "
-discharging_symbol = " "
-disabled = true
+full_symbol = " ├─ "
+charging_symbol = " ├─ "
+discharging_symbol = " ├─ "
+disabled = false
 
-[[battery.display]]  # "bold red" style when capacity is between 0% and 10%
+[[battery.display]]  # "bold red" style when capacity is between 0% and 15%
 threshold = 15
 style = "bold red"
-disabled = true
 
-[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
-threshold = 50
+[[battery.display]]  # "bold yellow" style when capacity is between 15% and 40%
+threshold = 40
 style = "bold yellow"
-disabled = true
 
-[[battery.display]]  # "bold green" style when capacity is between 10% and 30%
+[[battery.display]]  # "bold green" style when capacity is between 40% and 80%
 threshold = 80
 style = "bold green"
-disabled = true
 
 # Prompt: optional param 1
 [time]
-format = " 🕙 $time($style)\n"
+format = " ⌚ $time($style)\n"
 time_format = "%T"
 style = "bright-white"
-disabled = true
+disabled = false
 
 # Prompt: param 2 └─
 [character]
@@ -140,3 +137,4 @@ symbol = " "
 
 [swift]
 symbol = "ﯣ "
+
