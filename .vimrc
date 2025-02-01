@@ -11,6 +11,10 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
+" Leader key
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 " disable compatibility to old vi
 set nocompatible
 
